@@ -1,4 +1,4 @@
-# 🚗 Indian Pre-Owned Car Price Prediction
+# Indian Pre-Owned Car Price Prediction
 
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-Web_App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
@@ -6,30 +6,30 @@
 ![XGBoost](https://img.shields.io/badge/XGBoost-Regression-FF6600?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-> **Machine Learning Capstone Project** for predicting used car prices in the Indian market using regression models and an interactive Streamlit application.
+> Machine Learning Capstone Project for predicting used car prices in the Indian market using regression models and an interactive Streamlit application.
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 **Indian Pre-Owned Car Price Prediction** is a machine learning project designed to estimate the selling price of used cars in India based on vehicle, location, ownership, engine, and usage-related features.
 
-The project covers the complete machine learning lifecycle, including Exploratory Data Analysis, missing value handling, feature engineering, preprocessing pipelines, model training, hyperparameter tuning, model evaluation, model serialization, and deployment through a Streamlit web application.
+The project covers the complete machine learning lifecycle, including exploratory data analysis, missing value handling, feature engineering, preprocessing pipelines, model training, hyperparameter tuning, model evaluation, model serialization, and deployment through a Streamlit web application.
 
-This project is suitable for portfolio presentation because it demonstrates practical machine learning skills across data analysis, modeling, evaluation, and user-facing deployment.
+This project demonstrates practical machine learning skills across data analysis, regression modeling, evaluation, and user-facing deployment.
 
 ---
 
-## ✨ Features
+## Features
 
-- Complete Exploratory Data Analysis
+- Complete exploratory data analysis
 - Missing value handling
 - Feature engineering
 - Data preprocessing using `Pipeline` and `ColumnTransformer`
 - Regression model training
 - Hyperparameter tuning using `RandomizedSearchCV`
 - Cross-validation
-- Model comparison using RMSE, MAE, and R² Score
+- Model comparison using RMSE, MAE, and R2 Score
 - Feature importance visualization
 - Model serialization using Joblib
 - Streamlit web application
@@ -40,7 +40,7 @@ This project is suitable for portfolio presentation because it demonstrates prac
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 | Category | Tools |
 |---|---|
@@ -54,47 +54,121 @@ This project is suitable for portfolio presentation because it demonstrates prac
 
 ---
 
-## 🔁 Machine Learning Workflow
+## Machine Learning Workflow
 
 ```text
-Raw Dataset
-    ↓
-Data Cleaning
-    ↓
+Raw CSV Datasets
+    |
+    +-- Training Data
+    +-- Test Data
+    +-- Sample Submission
+    |
+    v
+Data Understanding
+    |
+    +-- Shape and schema inspection
+    +-- Data type validation
+    +-- Missing value analysis
+    +-- Target variable review
+    |
+    v
 Exploratory Data Analysis
-    ↓
+    |
+    +-- Price distribution analysis
+    +-- Maker and model trends
+    +-- Location-based pricing patterns
+    +-- Distance and age relationship analysis
+    +-- Outlier and correlation analysis
+    |
+    v
+Data Preparation
+    |
+    +-- Column name cleaning
+    +-- Missing value handling
+    +-- Type conversion
+    +-- Train-test split
+    |
+    v
 Feature Engineering
-    ↓
+    |
+    +-- Car age features
+    +-- Engine specification features
+    +-- Ownership and usage features
+    +-- Categorical feature preparation
+    |
+    v
 Preprocessing Pipeline
-    ↓
-Model Training
-    ↓
-Model Comparison
-    ↓
+    |
+    +-- Numerical imputation
+    +-- Categorical imputation
+    +-- One-hot encoding
+    +-- Feature scaling
+    +-- ColumnTransformer integration
+    |
+    v
+Model Development
+    |
+    +-- Linear Regression
+    +-- Random Forest Regressor
+    +-- Gradient Boosting Regressor
+    +-- XGBoost Regressor
+    +-- LightGBM Regressor
+    +-- CatBoost Regressor
+    |
+    v
+Model Validation and Selection
+    |
+    +-- Cross-validation
+    +-- RMSE evaluation
+    +-- MAE evaluation
+    +-- R2 Score comparison
+    +-- Feature importance analysis
+    |
+    v
 Hyperparameter Tuning
-    ↓
-Model Evaluation
-    ↓
-Model Serialization
-    ↓
+    |
+    +-- RandomizedSearchCV
+    +-- Best estimator selection
+    +-- Final pipeline selection
+    |
+    +-----------------------------+
+    |                             |
+    v                             v
+Model Serialization          Prediction Generation
+    |                             |
+    +-- Joblib model saving       +-- Test set prediction
+    +-- Final model artifact      +-- Submission CSV export
+    |
+    v
 Streamlit Deployment
+    |
+    +-- Single car prediction
+    +-- Batch CSV prediction
+    +-- Interactive dashboard
+    +-- Prediction CSV download
 ```
 
 ### Workflow Summary
 
-| Step | Description |
-|---|---|
-| Data Cleaning | Handles missing values, inconsistent formats, and noisy records. |
-| EDA | Studies feature distributions, relationships, outliers, and price trends. |
-| Feature Engineering | Creates useful derived features for better prediction performance. |
-| Preprocessing | Uses Scikit-learn pipelines for numerical and categorical transformations. |
-| Model Training | Trains multiple regression algorithms for comparison. |
-| Evaluation | Compares models using RMSE, MAE, and R² Score. |
-| Deployment | Serves predictions through an interactive Streamlit application. |
+| Stage | Key Actions | Output |
+|---|---|---|
+| Data Ingestion | Load training, test, and sample submission CSV files | Structured Pandas DataFrames |
+| Data Understanding | Inspect shape, data types, missing values, duplicates, and target distribution | Initial data quality report |
+| Exploratory Data Analysis | Analyze price trends by maker, model, fuel type, location, distance, and age | Visual insights and modeling assumptions |
+| Data Cleaning | Handle missing values, inconsistent column names, and noisy records | Cleaner training and inference data |
+| Feature Engineering | Create age-related features and prepare vehicle specification variables | Improved feature set |
+| Preprocessing Pipeline | Apply imputation, encoding, scaling, and column-wise transformations | Reusable Scikit-learn preprocessing pipeline |
+| Model Training | Train multiple regression algorithms on prepared features | Candidate models |
+| Cross Validation | Validate model performance across folds | More reliable performance estimate |
+| Hyperparameter Tuning | Use `RandomizedSearchCV` to search stronger model settings | Tuned model configuration |
+| Model Evaluation | Compare RMSE, MAE, and R2 Score across models | Final model selection |
+| Feature Importance | Analyze influential features from tree-based models | Model interpretability insights |
+| Model Serialization | Save the final trained model using Joblib | `models/best_model.pkl` |
+| Deployment | Build Streamlit app for single, batch, and dashboard views | Interactive ML web application |
 
 ---
 
-## 🤖 Models Implemented
+## Models Implemented
 
 | Model | Type |
 |---|---|
@@ -107,17 +181,17 @@ Streamlit Deployment
 
 ---
 
-## 📊 Evaluation Metrics
+## Evaluation Metrics
 
 | Metric | Description |
 |---|---|
 | RMSE | Measures the square root of average squared prediction error. Lower is better. |
 | MAE | Measures the average absolute difference between actual and predicted prices. Lower is better. |
-| R² Score | Measures how well the model explains variance in car prices. Higher is better. |
+| R2 Score | Measures how well the model explains variance in car prices. Higher is better. |
 
 ---
 
-## 🧾 Dataset Information
+## Dataset Information
 
 The project uses car listing datasets provided as CSV files.
 
@@ -145,7 +219,7 @@ The project uses car listing datasets provided as CSV files.
 
 ---
 
-## 🧹 Preprocessing Steps
+## Preprocessing Steps
 
 - Removed or handled missing values
 - Cleaned inconsistent column names
@@ -158,39 +232,43 @@ The project uses car listing datasets provided as CSV files.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 Indian-Car-Price-Prediction/
-├── app/
-│   └── app.py
-├── data/
-│   ├── Cap_Sample_Submission_2025.csv
-│   ├── Cap_Test_Data_2025.csv
-│   └── Cap_Training_Data_2025.csv
-├── models/
-│   ├── best_model.pkl
-│   ├── feature_names.pkl
-│   └── preprocessor.pkl
-├── notebooks/
-│   ├── Car_Price_Prediction.ipynb
-│   └── catboost_info/
-├── outputs/
-│   └── submission.csv
-├── .venv/
-├── requirement.txt
-└── README.md
+|-- app/
+|   `-- app.py
+|-- data/
+|   |-- Cap_Sample_Submission_2025.csv
+|   |-- Cap_Test_Data_2025.csv
+|   `-- Cap_Training_Data_2025.csv
+|-- images/
+|   |-- batch_prediction.png
+|   |-- dashboard.png
+|   `-- home.png
+|-- models/
+|   |-- best_model.pkl
+|   |-- feature_names.pkl
+|   `-- preprocessor.pkl
+|-- notebooks/
+|   |-- Car_Price_Prediction.ipynb
+|   `-- catboost_info/
+|-- outputs/
+|   `-- submission.csv
+|-- .gitignore
+|-- requirement.txt
+`-- README.md
 ```
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Somyaranjan-Jena/Indian-Car-Price-Prediction.git
-cd Indian-Car-Price-Prediction
+git clone https://github.com/Somyaranjan-Jena/Indian-Pre-Owned-Car-Price-Prediction.git
+cd Indian-Pre-Owned-Car-Price-Prediction
 ```
 
 ### 2. Create a Virtual Environment
@@ -201,13 +279,13 @@ python -m venv .venv
 
 ### 3. Activate the Virtual Environment
 
-#### Windows
+Windows:
 
 ```bash
 .venv\Scripts\activate
 ```
 
-#### macOS/Linux
+macOS/Linux:
 
 ```bash
 source .venv/bin/activate
@@ -221,7 +299,7 @@ pip install -r requirement.txt
 
 ---
 
-## 📦 Required Libraries
+## Required Libraries
 
 ```text
 pandas
@@ -239,7 +317,7 @@ seaborn
 
 ---
 
-## 📓 How to Run the Notebook
+## How to Run the Notebook
 
 Start Jupyter Notebook:
 
@@ -257,7 +335,7 @@ Run all cells to perform EDA, preprocessing, model training, evaluation, and mod
 
 ---
 
-## 🌐 How to Run the Streamlit App
+## How to Run the Streamlit App
 
 Launch the Streamlit application:
 
@@ -274,7 +352,7 @@ The application includes:
 
 ---
 
-## 🖼️ Screenshots
+## Screenshots
 
 ### Home Page
 
@@ -290,11 +368,11 @@ The application includes:
 
 ---
 
-## 📈 Model Performance
+## Model Performance
 
-The models were evaluated using RMSE, MAE, and R² Score.
+The models were evaluated using RMSE, MAE, and R2 Score.
 
-| Model | RMSE | MAE | R² Score |
+| Model | RMSE | MAE | R2 Score |
 |---|---:|---:|---:|
 | Linear Regression | 1.1033 | 0.9272 | 0.5602 |
 | Random Forest Regressor | 1.1207 | 0.9133 | 0.5462 |
@@ -304,15 +382,15 @@ The models were evaluated using RMSE, MAE, and R² Score.
 | CatBoost Regressor | 1.1271 | 0.9457 | 0.5410 |
 
 <details>
-<summary>📌 Notes on Performance</summary>
+<summary>Notes on Performance</summary>
 
-Based on R² Score and RMSE, the Gradient Boosting Regressor achieved the strongest performance among the evaluated models.
+Based on R2 Score and RMSE, the Gradient Boosting Regressor achieved the strongest performance among the evaluated models.
 
 </details>
 
 ---
 
-## 🚀 Future Improvements
+## Future Improvements
 
 - Add live deployment on Streamlit Community Cloud
 - Improve UI styling and user experience
@@ -325,7 +403,7 @@ Based on R² Score and RMSE, the Gradient Boosting Regressor achieved the strong
 
 ---
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 - Python open-source ecosystem
 - Scikit-learn documentation
@@ -335,7 +413,7 @@ Based on R² Score and RMSE, the Gradient Boosting Regressor achieved the strong
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 | Name | GitHub |
 |---|---|
@@ -343,8 +421,9 @@ Based on R² Score and RMSE, the Gradient Boosting Regressor achieved the strong
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the **MIT License**.
 
 You are free to use, modify, and distribute this project with proper attribution.
+
