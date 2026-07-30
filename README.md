@@ -257,6 +257,7 @@ Indian-Car-Price-Prediction/
 |   `-- submission.csv
 |-- .gitignore
 |-- requirement.txt
+|-- requirements.txt
 `-- README.md
 ```
 
@@ -294,7 +295,7 @@ source .venv/bin/activate
 ### 4. Install Requirements
 
 ```bash
-pip install -r requirement.txt
+pip install -r requirements.txt
 ```
 
 ---
@@ -426,4 +427,3 @@ Based on R2 Score and RMSE, the Gradient Boosting Regressor achieved the stronge
 This project is licensed under the **MIT License**.
 
 You are free to use, modify, and distribute this project with proper attribution.
-
