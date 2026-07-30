@@ -292,21 +292,21 @@ The application includes:
 
 ## 📈 Model Performance
 
-Add your final model performance metrics here.
+The models were evaluated using RMSE, MAE, and R² Score.
 
 | Model | RMSE | MAE | R² Score |
 |---|---:|---:|---:|
-| Linear Regression | Add your RMSE here | Add your MAE here | Add your R² here |
-| Random Forest Regressor | Add your RMSE here | Add your MAE here | Add your R² here |
-| Gradient Boosting Regressor | Add your RMSE here | Add your MAE here | Add your R² here |
-| XGBoost Regressor | Add your RMSE here | Add your MAE here | Add your R² here |
-| LightGBM Regressor | Add your RMSE here | Add your MAE here | Add your R² here |
-| CatBoost Regressor | Add your RMSE here | Add your MAE here | Add your R² here |
+| Linear Regression | 1.1033 | 0.9272 | 0.5602 |
+| Random Forest Regressor | 1.1207 | 0.9133 | 0.5462 |
+| Gradient Boosting Regressor | 1.0612 | 0.9183 | 0.5931 |
+| XGBoost Regressor | 1.1671 | 0.9960 | 0.5079 |
+| LightGBM Regressor | 1.1895 | 0.9764 | 0.4888 |
+| CatBoost Regressor | 1.1271 | 0.9457 | 0.5410 |
 
 <details>
 <summary>📌 Notes on Performance</summary>
 
-Update this section after final model evaluation. Include the best-performing model, important features, and any observations from cross-validation.
+Based on R² Score and RMSE, the Gradient Boosting Regressor achieved the strongest performance among the evaluated models.
 
 </details>
 
